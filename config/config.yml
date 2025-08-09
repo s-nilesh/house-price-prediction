@@ -1,0 +1,7 @@
+model:
+  learning_rate: 0.001
+  epochs: 1000
+
+data:
+  train_file: "./data/data_for_lr.csv"
+  
