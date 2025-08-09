@@ -1,6 +1,18 @@
 import random
 import yaml
 import os
+import time
+
+
+def timeit(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        elapsed = end_time - start_time
+        print(f"[Timing] Function '{func.__name__}' executed in {elapsed:.3f} seconds")
+        return result
+    return wrapper
 
 
 class Config:

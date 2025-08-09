@@ -1,8 +1,9 @@
 import argparse
 from src.pipelines.train import TrainPipeline
-from src.utils.utils import Config
+from src.utils.utils import Config, timeit
 
 
+@timeit
 def main(task):
     conf = Config().load_config()
     if task == "train":

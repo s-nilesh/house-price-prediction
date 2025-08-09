@@ -54,4 +54,4 @@ class LinearRegression:
 
     def save_model(self, filename):
         with open(filename, "wb") as f:
-            pickle.dump(self, f)
+            pickle.dump(self.coefs, f)

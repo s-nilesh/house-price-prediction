@@ -11,3 +11,6 @@ wheels/
 
 # mlflow metadata
 mlruns
+
+# pytest cache
+.pytest_cache
