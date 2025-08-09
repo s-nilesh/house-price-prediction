@@ -6,7 +6,7 @@ import os
 class Config:
     def __init__(self, config_path="config/config.yml"):
         self.config_path = config_path
-        self.config = self.load_config()
+        self.config = None
 
     def load_config(self):
         if not os.path.exists(self.config_path):

@@ -1,0 +1,10 @@
+artifact_location: /home/nilesh/projects/models/m-655917ced985493a80f8f6004a6c88bc/artifacts
+creation_timestamp: 1754743748537
+experiment_id: '557336228373279280'
+last_updated_timestamp: 1754743750801
+model_id: m-655917ced985493a80f8f6004a6c88bc
+model_type: null
+name: lr_model
+source_run_id: a3e0026aedef4c2eb7e1bd7c0e2d88d6
+status: 2
+status_message: null
