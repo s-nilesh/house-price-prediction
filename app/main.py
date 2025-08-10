@@ -29,9 +29,8 @@
 
 
 from fastapi import FastAPI
-from pydantic import BaseModel
 from starlette.responses import JSONResponse
-from router import api_router
+from app.router import api_router
 
 app = FastAPI(title="House Price Prediction")
 
