@@ -1,6 +1,13 @@
+import sys
+import os
+
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src"))
+)
+
 import pytest
 import numpy as np
-from algorithms.linear_regression import LinearRegression
+from src.algorithms.linear_regression import LinearRegression
 
 
 @pytest.fixture

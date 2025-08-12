@@ -542,6 +542,9 @@ dev = [
     { name = "ipykernel" },
     { name = "pytest" },
 ]
+test = [
+    { name = "pytest" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -563,6 +566,7 @@ dev = [
     { name = "ipykernel", specifier = ">=6.30.1" },
     { name = "pytest", specifier = ">=8.4.1" },
 ]
+test = [{ name = "pytest", specifier = ">=8.4.1" }]
 
 [[package]]
 name = "idna"
