@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv
-          uv sync --no-dev
+          uv sync --group test
 
       - name: Run unit tests
         run: pytest --maxfail=1 --disable-warnings -q
