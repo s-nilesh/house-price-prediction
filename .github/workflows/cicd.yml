@@ -16,10 +16,10 @@ jobs:
     if: always()
     uses: ./.github/workflows/test.yml
 
-  # build:
-  #   needs: test
-  #   if: success()
-  #   uses: ./.github/workflows/build-docker.yml
+  build:
+    needs: test
+    if: success()
+    uses: ./.github/workflows/build-docker.yml
 
   # publish:
   #   needs: build
