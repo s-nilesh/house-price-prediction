@@ -25,8 +25,8 @@ dev = [
 ]
 
 [tool.ruff]
-lint.extend-select = ["N"]
-lint.ignore = ["PTH123", "N806"]
+lint.extend-select = []
+lint.ignore = ["PTH123", "N806", "N803"]
 
 [tool.ruff.format]
 docstring-code-format = true
