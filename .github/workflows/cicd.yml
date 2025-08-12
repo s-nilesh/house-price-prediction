@@ -9,7 +9,7 @@ on:
 jobs:
   lint_format:
     if: github.event_name == 'push'
-    uses: ./.github/workflow/jobs/lint_format_check.yml
+    uses: ./.github/workflow/lint_format_check.yml
 
   test:
     needs: [lint_format]
