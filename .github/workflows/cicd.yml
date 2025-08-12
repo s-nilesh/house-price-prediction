@@ -9,19 +9,19 @@ on:
 jobs:
   lint_format:
     if: github.event_name == 'push'
-    uses: ./.github/workflows/jobs/lint_format_check.yml
+    uses: ./.github/workflows/lint_format_check.yml
 
   test:
     needs: [lint_format]
     if: always()
-    uses: ./.github/workflows/jobs/test.yml
+    uses: ./.github/workflows/test.yml
 
   # build:
   #   needs: test
   #   if: success()
-  #   uses: ./.github/workflows/jobs/build-docker.yml
+  #   uses: ./.github/workflows/build-docker.yml
 
   # publish:
   #   needs: build
   #   if: success()
-  #   uses: ./.github/workflows/jobs/publish.yml
+  #   uses: ./.github/workflows/publish.yml
