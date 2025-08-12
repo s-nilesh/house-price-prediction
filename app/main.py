@@ -2,7 +2,7 @@
 # from typing import Union
 # from pydantic import BaseModel
 
-# # create a FastAPI application 
+# # create a FastAPI application
 # app = FastAPI()
 
 # class Item(BaseModel):
@@ -36,6 +36,7 @@ app = FastAPI(title="House Price Prediction")
 
 app.include_router(api_router)
 
+
 @app.get("/health")
 async def health_check():
-    return JSONResponse(content={"status":"ok"})
+    return JSONResponse(content={"status": "ok"})

@@ -5,11 +5,14 @@ from pydantic import BaseModel, conlist
 
 api_router = APIRouter()
 
+
 class PredictionRequest(BaseModel):
     features: conlist(float, min_length=1, max_length=1)
 
+
 class ModelResponse(BaseModel):
-    prediction: int 
+    prediction: int
+
 
 @api_router.post("/predict", response_model=ModelResponse)
 async def predict_endpoint(request: PredictionRequest):

@@ -9,11 +9,13 @@ def main(task):
     if task == "train":
         pipeline = TrainPipeline(config=conf)
     else:
-        raise ValueError(f"Unknown task '{task}'. Supported tasks: 'train', 'inference'")
-    
+        raise ValueError(
+            f"Unknown task '{task}'. Supported tasks: 'train', 'inference'"
+        )
+
     print(pipeline)
     pipeline.execute()
-    
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run ML pipeline tasks")

@@ -1,0 +1,27 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [dev, main]
+
+jobs:
+  lint_format:
+    if: github.event_name == "push"
+    uses: ./.github/workflow/jobs/lint_format_check.yml
+
+  test:
+    needs: [lint_format]
+    if: always()
+    uses: ./.github/workflows/jobs/test.yml
+
+  # build:
+  #   needs: test
+  #   if: success()
+  #   uses: ./.github/workflows/jobs/build-docker.yml
+
+  # publish:
+  #   needs: build
+  #   if: success()
+  #   uses: ./.github/workflows/jobs/publish.yml

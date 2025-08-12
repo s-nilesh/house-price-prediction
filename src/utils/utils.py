@@ -12,6 +12,7 @@ def timeit(func):
         elapsed = end_time - start_time
         print(f"[Timing] Function '{func.__name__}' executed in {elapsed:.3f} seconds")
         return result
+
     return wrapper
 
 
@@ -22,11 +23,12 @@ class Config:
 
     def load_config(self):
         if not os.path.exists(self.config_path):
-            raise FileNotFoundError(f"Configuration file not found at {self.config_path}")
-        with open(self.config_path, 'r') as file:
+            raise FileNotFoundError(
+                f"Configuration file not found at {self.config_path}"
+            )
+        with open(self.config_path, "r") as file:
             config = yaml.safe_load(file)
         return config
-    
 
 
 def train_test_split(X, y, test_size=0.25, shuffle=True, seed=None):
@@ -36,7 +38,7 @@ def train_test_split(X, y, test_size=0.25, shuffle=True, seed=None):
     assert len(X) == len(y), "Error: length of X and y are not the same"
 
     n_samples = len(X)
-    test_size = int(test_size * n_samples) 
+    test_size = int(test_size * n_samples)
     indices = list(range(n_samples))
 
     if shuffle:
