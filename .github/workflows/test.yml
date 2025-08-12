@@ -1,0 +1,26 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  precommit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install uv
+          uv sync --no-dev
+
+      - name: Run unit tests
+        run: pytest --maxfail=1 --disable-warnings -q
