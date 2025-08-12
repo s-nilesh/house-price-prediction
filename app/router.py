@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from starlette.responses import JSONResponse
-from app.endpoint import predict
+from endpoint import predict
 from pydantic import BaseModel, conlist
 
 api_router = APIRouter()

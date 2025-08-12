@@ -6,7 +6,6 @@ from src.eval.metrics import Metrics
 from src.utils.utils import timeit
 import pandas as pd
 from src.pipelines.base_pipeline import BasePipeline  # Inherit from BasePipeline
-import shutil
 
 class TrainPipeline(BasePipeline):
     def __init__(self, config):

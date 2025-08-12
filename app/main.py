@@ -30,7 +30,7 @@
 
 from fastapi import FastAPI
 from starlette.responses import JSONResponse
-from app.router import api_router
+from router import api_router
 
 app = FastAPI(title="House Price Prediction")
 
